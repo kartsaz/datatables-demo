@@ -1,18 +1,18 @@
 <?php
 
-use App\Models\Role;
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Support\Facades\Schema;
+namespace Database\Seeders;
 
-return new class extends Migration
+use App\Models\Role;
+use Illuminate\Database\Seeder;
+
+class RolesSeeder extends Seeder
 {
     /**
-     * Run the migrations.
+     * Run the database seeds.
      *
      * @return void
      */
-    public function up()
+    public function run()
     {
         $roles = [
             Role::ADMIN => 'Administrator',
@@ -26,14 +26,4 @@ return new class extends Migration
             ]);
         }
     }
-
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
-    public function down()
-    {
-        //
-    }
-};
+}
